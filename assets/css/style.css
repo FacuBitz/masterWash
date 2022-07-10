@@ -64,6 +64,14 @@ li a:hover{
 .nav__oscuro{
     background: #29292e;
 }
+nav .checkbtn .line {
+	width: 30px;
+	height: 5px;
+	background-color: #fff;
+	margin: 5px;
+	border-radius: 3px;
+	transition: all .3s ease-in-out;
+}
 
 /* fin nav */
 
@@ -276,6 +284,16 @@ li a:hover{
     width: 100%;
     max-width: 185px;
 }
+.productos:hover{
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes shake{
+    0% {transform: rotate(2deg);}
+    25% {transform: rotate(-2deg);}
+    50% {transform: rotate(-4deg);}
+    75% {transform: rotate(2deg);}
+}
 
 /* fin main nosotros */
 /* footer nosotros */
@@ -320,9 +338,10 @@ li a:hover{
     flex-direction: column;
     width: 25vh;
     cursor: pointer;
+    transition: all .5s;
 }
 .productos__article:hover{
-    border: 2px rgba(0, 0, 0, 0.450) solid;
+    transform: scale(1.1 ,1.1);
 }
 .productos__texto{
     margin: 1rem;
@@ -364,6 +383,10 @@ li a:hover{
     cursor: pointer;
     max-width: 420px;
     flex: 1 1 clamp(25vh ,28vh ,42vh);
+    transition: all .5s;
+}
+.trabajos__article:hover{
+    transform: scale(1.1 ,1.1);
 }
 .section__subtitulo{
     font-size: 2em;
@@ -571,6 +594,16 @@ li a:hover{
     nav ul li a{
         font-size: 1.4em;
     }
+    nav :checked ~ .checkbtn .line:nth-child(1) {
+		transform: translateY(10px) rotate(225deg);
+	}
+	nav :checked ~ .checkbtn .line:nth-child(3) {
+		transform: translateY(-10px) rotate(-225deg);
+	}
+	nav :checked ~ .checkbtn .line:nth-child(2) {
+		opacity: 0;
+	}
+
 
     /*----- index -----*/
     .header__h1{
