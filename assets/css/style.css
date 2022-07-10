@@ -64,6 +64,14 @@ li a:hover{
 .nav__oscuro{
     background: #29292e;
 }
+nav .checkbtn .line {
+	width: 30px;
+	height: 5px;
+	background-color: #fff;
+	margin: 5px;
+	border-radius: 3px;
+	transition: all .3s ease-in-out;
+}
 
 /* fin nav */
 
@@ -586,6 +594,16 @@ li a:hover{
     nav ul li a{
         font-size: 1.4em;
     }
+    nav :checked ~ .checkbtn .line:nth-child(1) {
+		transform: translateY(10px) rotate(225deg);
+	}
+	nav :checked ~ .checkbtn .line:nth-child(3) {
+		transform: translateY(-10px) rotate(-225deg);
+	}
+	nav :checked ~ .checkbtn .line:nth-child(2) {
+		opacity: 0;
+	}
+
 
     /*----- index -----*/
     .header__h1{
