@@ -31,6 +31,7 @@ nav ul{
     display: flex;
     justify-content: flex-end;
     margin-right: 2rem;
+    margin-bottom: 0;
 }
 nav ul li{
     display: inline-block;
@@ -48,6 +49,7 @@ nav ul li a{
 li a:hover{
     background: grey;
     transition: .5s;
+    color: aliceblue;
 }
 .checkbtn{
     font-size: 3em;
@@ -157,13 +159,6 @@ nav .checkbtn .line {
 
 /* fin main index */
 /* footer index */
-
-.footer{
-    text-align: center;
-    margin-top: 5rem;
-    color: aliceblue; 
-}
-/* fin footer index */
 /* fin body index */
 
 
@@ -297,12 +292,6 @@ nav .checkbtn .line {
 
 /* fin main nosotros */
 /* footer nosotros */
-
-.footer--negro{
-    color: black;
-}
-
-/* fin footer nosotros */
 /* fin body nosotros */
 
 
@@ -473,6 +462,45 @@ nav .checkbtn .line {
 /* footer contacto */
 /* fin body contacto */
 
+/*---------- clases bootstrap ----------*/
+
+/* index */
+h1{
+    margin-bottom: 0;
+}
+.footer__blanco{
+    color: aliceblue;
+    font-size: 1.2em;
+}
+/* nosotros */
+.linea__negra{
+    border-bottom: 1px solid #626262;
+}
+.text-muted{
+    font-size: 1.2em;
+}
+.nav-link:hover{
+    background-color: #c2cdd6;
+    border-radius: 5px;
+}
+/* productos */
+p{
+    margin-bottom: 0;
+}
+.footer__responsive{
+    display: none;
+}
+/* trabajos */
+.trabajos__footer{
+    color: #29292e;
+    font-size: 1.2em;
+}
+.trabajos__footer:hover{
+    color: #29292e;
+}
+
+
+/* ---------- media ----------*/
 
 @media screen and (max-width:1300px){
     .productos{
@@ -555,6 +583,9 @@ nav .checkbtn .line {
         margin-left: 5rem;
         margin-right: 5rem;
     }
+    .footer__responsive{
+        display: block;
+    }
 }
 
 @media screen and (max-width:860px){
@@ -567,7 +598,7 @@ nav .checkbtn .line {
     .checkbtn{
         display: block;
     }    
-    ul{
+    .nav__responsive{
         flex-direction: column;
         position: fixed;
         width: 100%;
