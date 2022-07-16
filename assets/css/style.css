@@ -312,7 +312,7 @@ nav .checkbtn .line {
     margin-right: 10rem;
 }
 .main__titulo--negro{
-    color: black;
+    color: #29292e;
 }
 .titulo__flex{
     display: flex;
@@ -416,6 +416,7 @@ nav .checkbtn .line {
 /* fin body trabajos */
 
 
+
 /*---------- contacto ----------*/
 /* body contacto */
 
@@ -425,30 +426,8 @@ nav .checkbtn .line {
 
 /* main contacto */
 
-.form{
-    height: 38vh;
-    display: flex;
-    justify-content: flex-start;
-    margin: 6rem 0 4rem 14rem;
-    font-size: 1.4em;
-}
-.fieldset{
-    padding: 1rem 0rem 1rem 2rem;
-    display: flex;
-    width: 70vw;
-    max-width: 80vh;
-    justify-content: space-around;
-    flex-direction: column;
-}
-.button__style{
-    padding: 0.3rem;
-    cursor: pointer;
-}
-.button__gap{
-    display: flex;
-    gap: 8px;
-}
 .contacto__section{
+    margin-top: 4rem;
     padding: 5rem 0 5rem 5rem;
     font-size: 1.6em;
     background: linear-gradient(90deg, #cdcbef8a, transparent)
@@ -461,6 +440,8 @@ nav .checkbtn .line {
 /* fin main contacto */
 /* footer contacto */
 /* fin body contacto */
+
+
 
 /*---------- clases bootstrap ----------*/
 
@@ -498,7 +479,19 @@ p{
 .trabajos__footer:hover{
     color: #29292e;
 }
-
+/* contacto */
+.form-label{
+    font-size: 1.4em;
+}
+.form-control{
+    border: 1px solid #808183;
+}
+.form-select{
+    border: 1px solid #808183;
+}
+.btn{
+    margin-right: .5rem;
+}
 
 /* ---------- media ----------*/
 

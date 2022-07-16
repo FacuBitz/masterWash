@@ -35,37 +35,45 @@
     </header>
     <main>
         <h1 class="main__titulo main__titulo--negro titulo__flex">Comuníquese con nosotros</h1>
-        <form action="" class="form">
-            <fieldset class="fieldset">
-                <legend>Dejanos tu informacion personal</legend>
-                <div>
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" placeholder="Nombre" name="nombre">
+        
+        <div class="container">
+            <form class="row g-3 mt-5 needs-validation">
+                <div class="col-6">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control form-control-lg" id="nombre" placeholder="Escribe tu nombre" required>
                 </div>
-                <div>
-                    <label for="apellido">Apellido:</label>
-                    <input type="text" placeholder="Apellido" name="apellido">
+                <div class="col-6">
+                    <label for="apellido" class="form-label">Apellido</label>
+                    <input type="text" class="form-control form-control-lg" id="apellido" placeholder="Escribe tu apellido" required>
                 </div>
-                <div>
-                    <label for="email">Email:</label>
-                    <input type="email" name="email" id="">
+                <div class="col-6">
+                    <label for="ciudad" class="form-label">Ciudad</label>
+                    <input type="text" class="form-control form-control-lg" id="ciudad" placeholder="Ciudad" required>
                 </div>
-                <div>
-                    <label for="productos">Me interesa adquirir un:</label>
-                    <select name="productos" class="button__style">
+                <div class="col-6">
+                    <label for="tel" class="form-label">Telefono</label>
+                    <input type="tel" class="form-control form-control-lg" id="tel" placeholder="Escribe tu numero" required>
+                </div>
+                <div class="col-12">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control form-control-lg" id="email" placeholder="Escribe tu email" required>
+                </div>
+                <div class="col-12 mb-3">
+                    <label for="productos" class="form-label">Me interesa adquirir un:</label>
+                    <select name="productos" class="form-select form-select-lg" aria-label="Default select example">
                         <option value="tratamientoPremium">Tratamiento premium</option>
                         <option value="tratamientoMedio">Tratamiento medio</option>
                         <option value="tratamientoBase">Tratamiento base</option>
                         <option value="productoLimpieza">Productos de limpieza</option>
                     </select>
                 </div>
-                <div class="button__gap">
-                    <input type="submit" value="Enviar" class="button__style">
-                    <input type="reset" value="Limpiar formulario" class="button__style">
-                    <input type="button" value="Sin acciones" class="button__style">
+                <div class="mb-5">
+                    <input type="submit" value="Enviar" class="btn btn-primary btn-lg">
+                    <input type="reset" value="Limpiar formulario" class="btn btn-secondary">
+                    <input type="button" value="Sin acciones" class="btn btn-secondary">
                 </div>
-            </fieldset>
-        </form>
+            </form>
+        </div>
         <section class="contacto__section">
                 <h2>Nuestros medios de contacto:</h2>
                 <p class="contacto__margin">Telefono: 011-4136-7890</p>
