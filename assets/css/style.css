@@ -19,7 +19,6 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(0, 0, 0, 0.445);
     height: 80px;
     width: 100%;
 }
@@ -31,6 +30,7 @@ nav ul{
     display: flex;
     justify-content: flex-end;
     margin-right: 2rem;
+    margin-bottom: 0;
 }
 nav ul li{
     display: inline-block;
@@ -46,8 +46,9 @@ nav ul li a{
     list-style: none;
 }
 li a:hover{
-    background: grey;
+    background: rgb(156, 156, 156);
     transition: .5s;
+    color: aliceblue;
 }
 .checkbtn{
     font-size: 3em;
@@ -80,90 +81,67 @@ nav .checkbtn .line {
 /* body index */
 
 .body__index{
-    background-color: rgb(71, 71, 71);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-image: url(https://images.unsplash.com/photo-1530675706010-bc677ce30ab6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80);
+    background-color: rgb(247, 250, 250);
 }
 
 /* header index */
+.index__nav{
+    box-shadow: 3px 0px 8px 0px rgba(0, 0, 0, 0.3);
+}
+.index__a{
+    color: rgb(37, 37, 37);
+}
 
 .header__h1{
-    width: 20vh;
-    font-size: 2.4em;
-    font-weight: 400;
+    width: 19vw;
+    max-width: 170px;
+    font-size: 2.2em;
+    font-weight: 500;
     color: aliceblue;
+    font-family: 'Lora', serif;
 } 
+.header__h1--index{
+    color: rgb(37, 37, 37);
+}
 
 /* fin header index */
 /* main index */
 
-.template__index{
-    display: grid;
-    height: 80vh;
-    grid-template-areas: 
-        "titulo titulo aside"
-        ".      .      aside"
-        "lorem  .      aside"
-    ;
-    grid-template-rows: 0.5fr 0.5fr 1fr;
-    grid-template-columns: 1fr 1.5fr 1fr;
+
+
+.index__titulo{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lora', serif;
+    margin: 4rem 0 0 6rem;
+    max-width: 50%;
+    gap: 10px;
+}
+.index__h2{
+    font-size: 5em;
+}
+.index__h3{
+    font-size: 2.6em;
+}
+.index__texto{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 2em;
+    font-family: 'Lora', serif;
+    margin-right: 3rem;
+}
+.nav{
+    gap: 20px;
+}
+.row{
+    align-items: flex-end;
 }
 
-.main__divPrincipal{
-    grid-area: titulo;
-    display: flex;
-    flex-direction: column;
-    color: aliceblue;
-    margin-left: 4rem;
-    justify-content: space-evenly;
-}
-.main__titulo{
-    max-width: 590px;
-    font-weight: 400;
-    font-size: 4em;
-}
-.main__subtitulo{
-    font-weight: 400;
-    font-size: 2.4em;
-}
-.main__divSecundario{
-    grid-area: lorem;
-    color: aliceblue;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    margin-left: 4rem;
-}
-.main__lorem{
-    padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.3);
-    width: 35vh;
-    font-size: 2em;
-    line-height: 3vh;
-    margin-bottom: 1.5rem;
-}
-.main__info{
-    font-weight: 500;
-    font-size: 2em;
-    color: aliceblue;
-    text-decoration: none;
-} 
-.main__info:hover{
-    text-decoration: underline;
-}
+
 
 /* fin main index */
 /* footer index */
-
-.footer{
-    text-align: center;
-    margin-top: 5rem;
-    color: aliceblue; 
-}
-/* fin footer index */
 /* fin body index */
 
 
@@ -175,6 +153,15 @@ nav .checkbtn .line {
 }
 
 /* main nosotros */
+.main__titulo{
+    max-width: 590px;
+    font-weight: 400;
+    font-size: 4em;
+}
+.main__subtitulo{
+    font-weight: 400;
+    font-size: 2.4em;
+}
 
 .template__nosotros{
     display: grid;
@@ -297,12 +284,6 @@ nav .checkbtn .line {
 
 /* fin main nosotros */
 /* footer nosotros */
-
-.footer--negro{
-    color: black;
-}
-
-/* fin footer nosotros */
 /* fin body nosotros */
 
 
@@ -323,7 +304,7 @@ nav .checkbtn .line {
     margin-right: 10rem;
 }
 .main__titulo--negro{
-    color: black;
+    color: #29292e;
 }
 .titulo__flex{
     display: flex;
@@ -427,6 +408,7 @@ nav .checkbtn .line {
 /* fin body trabajos */
 
 
+
 /*---------- contacto ----------*/
 /* body contacto */
 
@@ -436,30 +418,8 @@ nav .checkbtn .line {
 
 /* main contacto */
 
-.form{
-    height: 38vh;
-    display: flex;
-    justify-content: flex-start;
-    margin: 6rem 0 4rem 14rem;
-    font-size: 1.4em;
-}
-.fieldset{
-    padding: 1rem 0rem 1rem 2rem;
-    display: flex;
-    width: 70vw;
-    max-width: 80vh;
-    justify-content: space-around;
-    flex-direction: column;
-}
-.button__style{
-    padding: 0.3rem;
-    cursor: pointer;
-}
-.button__gap{
-    display: flex;
-    gap: 8px;
-}
 .contacto__section{
+    margin-top: 4rem;
     padding: 5rem 0 5rem 5rem;
     font-size: 1.6em;
     background: linear-gradient(90deg, #cdcbef8a, transparent)
@@ -473,6 +433,59 @@ nav .checkbtn .line {
 /* footer contacto */
 /* fin body contacto */
 
+
+
+/*---------- clases bootstrap ----------*/
+
+/* index */
+h1{
+    margin-bottom: 0;
+}
+.footer__blanco{
+    color: aliceblue;
+    font-size: 1.2em;
+}
+/* nosotros */
+.linea__negra{
+    border-bottom: 1px solid #626262;
+}
+.text-muted{
+    font-size: 1.2em;
+}
+.nav-link:hover{
+    background-color: #c2cdd6;
+    border-radius: 5px;
+}
+/* productos */
+p{
+    margin-bottom: 0;
+}
+.footer__responsive{
+    display: none;
+}
+/* trabajos */
+.trabajos__footer{
+    color: #29292e;
+    font-size: 1.2em;
+}
+.trabajos__footer:hover{
+    color: #29292e;
+}
+/* contacto */
+.form-label{
+    font-size: 1.4em;
+}
+.form-control{
+    border: 1px solid #808183;
+}
+.form-select{
+    border: 1px solid #808183;
+}
+.btn{
+    margin-right: .5rem;
+}
+
+/* ---------- media ----------*/
 
 @media screen and (max-width:1300px){
     .productos{
@@ -488,6 +501,11 @@ nav .checkbtn .line {
     }
 
     /*----- index -----*/
+    .index__titulo{
+        max-width: 70%;
+    }
+
+
     .main__titulo{
         font-size: 3em;
         font-weight: 300;
@@ -495,10 +513,6 @@ nav .checkbtn .line {
     .main__subtitulo{
         font-size: 2em;
         font-weight: 200;
-    }
-    .main__lorem{
-        font-size: 1.6em;
-        line-height: 2.5vh;
     }
 
     /*----- nosotros -----*/
@@ -545,6 +559,16 @@ nav .checkbtn .line {
 
 }
 
+@media screen and (max-width: 990px){
+    /*----- index -----*/
+    .index__texto{
+        margin-left: 3rem;
+        margin-top: 4rem;
+        font-size: 1.8em;
+    }
+}
+
+
 @media screen and (max-width:940px){
 
     /*----- productos -----*/
@@ -554,6 +578,9 @@ nav .checkbtn .line {
         column-gap: 30px;
         margin-left: 5rem;
         margin-right: 5rem;
+    }
+    .footer__responsive{
+        display: block;
     }
 }
 
@@ -567,7 +594,7 @@ nav .checkbtn .line {
     .checkbtn{
         display: block;
     }    
-    ul{
+    .nav__responsive{
         flex-direction: column;
         position: fixed;
         width: 100%;
@@ -608,6 +635,12 @@ nav .checkbtn .line {
     /*----- index -----*/
     .header__h1{
         font-size: 1.6em;
+    }
+    .header__h1--index{
+        color: aliceblue;
+    }
+    .index__a{
+        color: aliceblue;
     }
 
     /*----- nosotros -----*/
@@ -656,6 +689,15 @@ nav .checkbtn .line {
     }
 }
 
+@media screen and (max-width:800px){
+    /*----- index -----*/
+    .index__h2{
+        font-size: 4em;
+    }
+    .nav{
+        gap: 8px;
+    }
+}
 
 @media screen and (max-width:700px){
 
@@ -675,6 +717,21 @@ nav .checkbtn .line {
 }
 
 @media screen and (max-width:600px){
+
+    /*----- index -----*/
+    .index__titulo{
+        max-width: 80%;
+    }
+    .index__texto{
+        gap: 25px;
+    }
+    .enlace{
+        margin-left: 0;
+    }
+    .header__h1{
+        width: 100px;
+    }
+
     /*----- nosotros -----*/
     .template__nosotros{
         grid-template-rows: 0.5fr 0.2fr 0fr 0fr;
@@ -696,7 +753,21 @@ nav .checkbtn .line {
     }
 }
 
+@media screen and (max-width:575px){
+    .nav{
+        justify-content: center;
+    }
+}
+
 @media screen and (max-width:480px){
+
+    /*----- index -----*/
+    .index__h2{
+        font-size: 3em;
+    }
+    .index__h3{
+        font-size: 2em;
+    }
 
     /*----- productos -----*/
     .template__productos{
@@ -721,29 +792,20 @@ nav .checkbtn .line {
         padding-left: 0;
         margin-left: 1.5rem;
     }
+
+    /*----- index -----*/
+    .index__titulo{
+        margin: 4rem 0 0 4rem;
+    }
     .main__titulo{
         font-size: 2.5em;
         justify-content: center;
         margin-left: 0;
     }
-
-    /*----- index -----*/
-    .main__divPrincipal{
-        margin-left: 2rem;
-        gap: 10px;
-        margin-top: 2.5rem;
-        justify-content: flex-start;
-    }
     .main__titulo{
         font-size: 2em;
     }
     .main__subtitulo{
-        font-size: 1.6em;
-    }
-    .main__divSecundario{
-        margin-left: 2rem;
-    }
-    .main__info{
         font-size: 1.6em;
     }
 
@@ -763,10 +825,6 @@ nav .checkbtn .line {
 
     .main__titulo{
         font-size: 2em;
-    }
-
-    .main__lorem{
-        width: 32vh;
     }
 
     /*----- nosotros -----*/
@@ -808,11 +866,6 @@ nav .checkbtn .line {
 }
 
 @media screen and (max-width:320px){
-
-    /*----- index -----*/
-    .main__lorem{
-        width: 28vh;
-    }
 
     /*----- nosotros -----*/
     .nosotros__titulo{
