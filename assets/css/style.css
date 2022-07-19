@@ -596,7 +596,7 @@ p{
     }    
     .nav__responsive{
         flex-direction: column;
-        position: fixed;
+        position: absolute;
         width: 100%;
         background: #29292e;
         top: 80px;
@@ -717,6 +717,10 @@ p{
 }
 
 @media screen and (max-width:600px){
+    /*----- nav -----*/
+    .checkbtn{
+        margin-right: 2rem;
+    }
 
     /*----- index -----*/
     .index__titulo{
