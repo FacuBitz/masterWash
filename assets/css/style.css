@@ -317,7 +317,8 @@ nav .checkbtn .line {
     border-radius: 8px;
     display: flex;
     flex-direction: column;
-    width: 25vh;
+    width: 15vw;
+    max-width: 250px;
     cursor: pointer;
     transition: all .5s;
 }
@@ -326,6 +327,7 @@ nav .checkbtn .line {
 }
 .productos__texto{
     margin: 1rem;
+    font-size: 1.2em;
 } 
 
 /* fin main productos */
@@ -363,7 +365,7 @@ nav .checkbtn .line {
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     max-width: 420px;
-    flex: 1 1 clamp(25vh ,28vh ,42vh);
+    flex: 1 1 clamp(300px ,28vw ,450px);
     transition: all .5s;
 }
 .trabajos__article:hover{
@@ -376,7 +378,7 @@ nav .checkbtn .line {
 .section__lorem{
     font-size: 1.6em;
     margin: 0rem 2rem;
-    line-height: 2.5vh;
+    line-height: 2.5rem;
 }
 .section__sellador{
     width: 100%;
@@ -397,7 +399,7 @@ nav .checkbtn .line {
     font-size: 3em;
     color: aliceblue;
     font-weight: 400;
-    max-width: 50vh;
+    max-width: 30vw;
 }
 .trabajos__iframe{
     grid-area: video;
@@ -488,6 +490,12 @@ p{
 /* ---------- media ----------*/
 
 @media screen and (max-width:1300px){
+    /* nosotros */
+    .main__subtitulo--nosotros{
+        font-size: 1.8em;
+    }
+
+    /* productos */
     .productos{
         max-width: 140px;
     }
@@ -554,7 +562,7 @@ p{
         margin-right: 7rem;
     }
     .productos__article{
-        width: 20vh;
+        width: 18vw;
     }
 
 }
@@ -565,6 +573,16 @@ p{
         margin-left: 3rem;
         margin-top: 4rem;
         font-size: 1.8em;
+    }
+
+    /* nosotros */
+    .nosotros__titulo{
+        padding: 3rem;
+    }
+
+    /* trabajos */
+    .div__subtitulo{
+        max-width: 60vw;
     }
 }
 
@@ -579,10 +597,15 @@ p{
         margin-left: 5rem;
         margin-right: 5rem;
     }
+    .productos__article{
+        width: 21vw;
+    }
     .footer__responsive{
         display: block;
     }
 }
+
+
 
 @media screen and (max-width:860px){
 
@@ -697,6 +720,10 @@ p{
     .nav{
         gap: 8px;
     }
+    /* productos */
+    .productos__article{
+        width: 22vw;
+    }
 }
 
 @media screen and (max-width:700px){
@@ -705,6 +732,9 @@ p{
     .template__productos{
         grid-template-columns: repeat(2, 2fr);
         grid-template-rows: repeat(4, 1fr);
+    }
+    .productos__article{
+        width: 32vw;
     }
 
     /*----- trabajos -----*/
@@ -779,7 +809,12 @@ p{
         margin-right: 2.5rem;
     }
     .productos__article{
-        width: 17vh;
+        width: 38vw;
+    }
+
+    /* nosotros */
+    .div__subtitulo{
+        font-size: 1.8em;
     }
 
     /*----- contacto -----*/
@@ -814,9 +849,12 @@ p{
     }
 
     /*----- trabajos -----*/
+    .trabajos__section{
+        margin: 3rem;
+    }
     .section__lorem{
         font-size: 1.4em;
-        line-height: 2vh;
+        line-height: 2rem;
     }
 
     /*----- contacto -----*/
@@ -851,12 +889,13 @@ p{
         grid-template-columns: 1fr;
     }
     .productos__article{
-        width: 20vh;
+        width: 60vw;
     }
 
     /*----- trabajos -----*/
     .section__sellador{
-        display: none;
+        max-width: 160px;
+        margin-top: 0;
     }
     .section__lorem{
         margin-bottom: 2rem;
