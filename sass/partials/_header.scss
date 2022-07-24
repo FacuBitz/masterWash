@@ -1,0 +1,183 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    .enlace{
+        margin-left: $spacing-base;
+        text-decoration: none;
+        h1{
+            margin-bottom: 0;
+        }
+        .header__h1{
+            width: 19vw;
+            max-width: 170px;
+            font-size: $medium;
+            font-weight: 500;
+            color: $primary;
+            font-family: $font-secundaria;
+            &--index{
+                color: $text-color;
+            } 
+        }
+    }
+    #check{
+        display: none;
+    }
+    .checkbtn{
+        font-size: 3em;
+        color: $primary;
+        float: right;
+        line-height: 80px;
+        margin-right: $spacing-medium;
+        cursor: pointer;
+        display: none;
+        .line {
+            width: 30px;
+            height: 5px;
+            background-color: $primary;
+            margin: 5px;
+            border-radius: 3px;
+            transition: all .3s ease-in-out;
+        }
+    }
+    ul{
+        display: flex;
+        justify-content: flex-end;
+        margin-right: $spacing-small;
+        margin-bottom: 0;
+        li{
+            display: inline-block;
+            margin: 0 5px;
+            a{
+                color: $primary;
+                font-size: $base;
+                padding: 7px 13px;
+                border-radius: 3px;
+                text-transform: uppercase;
+                text-decoration: none;
+                list-style: none;
+                &:hover{
+                    background: $alternative;
+                    transition: .5s;
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+
+// nav index
+.index__nav{
+    box-shadow: $shadow-small;
+}
+.index__a{
+    color: $text-color;
+}
+// fin nav index
+
+@media screen and (max-width:1120px){
+    nav ul li a{
+        font-size: $samll;
+    }
+}
+
+@media screen and (max-width:860px){
+    nav{
+        background: $secondary;
+        border-bottom: 2px solid rgb(97, 97, 97);
+        .enlace{
+            padding-left: $spacing-small;
+            .header__h1{
+                font-size: $base;
+                &--index{
+                    color: $primary;
+                }
+            }
+        }
+        #check:checked ~ ul{
+            left: 0;
+        }
+        .checkbtn{
+            display: block;
+        } 
+        :checked ~ .checkbtn{
+            .line:nth-child(1){
+                transform: translateY(10px) rotate(225deg);
+            }
+        }
+        :checked ~ .checkbtn{
+            .line:nth-child(3) {
+                transform: translateY(-10px) rotate(-225deg);
+            }
+        }
+        :checked ~ .checkbtn{
+            .line:nth-child(2) {
+                opacity: 0;
+            }
+        }
+        .nav__responsive{
+            flex-direction: column;
+            position: absolute;
+            width: 100%;
+            background: $secondary;
+            top: 80px;
+            left: -100%;
+            text-align: center;
+            transition: all .5s;
+        }
+        ul{
+            li{
+                display: block;
+                margin: $spacing-small;
+                a{
+                    &:hover{
+                        background: none;
+                        color: coral;
+                    }
+                }
+                .index__a{
+                    color: $primary;
+                }
+            }
+        }
+    }
+    
+    .nav__responsive{
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        background: $secondary;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+}
+
+@media screen and (max-width:600px){
+    nav{
+        .enlace{
+            margin-left: 0;
+            .header__h1{
+                width: 100px;
+            }
+        }
+        .checkbtn{
+            margin-right: $spacing-small;
+        }
+    }
+}
+
+@media screen and (max-width:425px){
+    nav{
+        .enlace{
+            padding-left: 0;
+            margin-left: 1.5rem;
+        }
+        .checkbtn{
+            margin-right: 1.5rem;
+        }
+    }
+}

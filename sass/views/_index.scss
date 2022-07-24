@@ -1,0 +1,70 @@
+.index__body{
+    background-color: $background;
+}
+.index__titulo{
+    display: flex;
+    flex-direction: column;
+    font-family: $font-secundaria;
+    margin: $spacing-medium 0 0 $spacing-large;
+    max-width: 50%;
+    gap: 10px;
+    &__h2{
+        font-size: $large;
+    }
+    &__h3{
+        font-size: 2.6em;
+    }
+}
+.index__texto{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 2em;
+    font-family: $font-secundaria;
+    margin-right: 3rem;
+}
+
+
+@media screen and (max-width:1120px){
+    .index__titulo{
+        max-width: 70%;
+    }
+}
+
+@media screen and (max-width: 990px){
+    .index__texto{
+        margin-left: 3rem;
+        margin-top: $spacing-medium;
+        font-size: 1.8em;
+    }
+}
+
+@media screen and (max-width:800px){
+    .index__titulo__h2{
+        font-size: 4em;
+    }
+}
+
+@media screen and (max-width:600px){
+    .index__titulo{
+        max-width: 80%;
+    }
+    .index__texto{
+        gap: 25px;
+    }
+}
+
+@media screen and (max-width:480px){
+    .index__titulo__h2{
+        font-size: 3em;
+    }
+    .index__titulo__h3{
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width:425px){
+    .index__titulo{
+        margin: $spacing-medium 0 0 $spacing-medium;
+    }
+}

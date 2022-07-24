@@ -73,14 +73,21 @@ nav .checkbtn .line {
 	border-radius: 3px;
 	transition: all .3s ease-in-out;
 }
-
+.header__h1{
+    width: 19vw;
+    max-width: 170px;
+    font-size: 2.2em;
+    font-weight: 500;
+    color: aliceblue;
+    font-family: 'Lora', serif;
+} 
 /* fin nav */
 
 
 /*---------- index ----------*/
 /* body index */
 
-.body__index{
+.index__body{
     background-color: rgb(247, 250, 250);
 }
 
@@ -91,15 +98,6 @@ nav .checkbtn .line {
 .index__a{
     color: rgb(37, 37, 37);
 }
-
-.header__h1{
-    width: 19vw;
-    max-width: 170px;
-    font-size: 2.2em;
-    font-weight: 500;
-    color: aliceblue;
-    font-family: 'Lora', serif;
-} 
 .header__h1--index{
     color: rgb(37, 37, 37);
 }
@@ -117,10 +115,10 @@ nav .checkbtn .line {
     max-width: 50%;
     gap: 10px;
 }
-.index__h2{
+.index__titulo__h2{
     font-size: 5em;
 }
-.index__h3{
+.index__titulo__h3{
     font-size: 2.6em;
 }
 .index__texto{
@@ -443,10 +441,6 @@ nav .checkbtn .line {
 h1{
     margin-bottom: 0;
 }
-.footer__blanco{
-    color: aliceblue;
-    font-size: 1.2em;
-}
 /* nosotros */
 .linea__negra{
     border-bottom: 1px solid #626262;
@@ -513,6 +507,7 @@ p{
         max-width: 70%;
     }
 
+    /*----- nosotros -----*/
 
     .main__titulo{
         font-size: 3em;
@@ -522,8 +517,6 @@ p{
         font-size: 2em;
         font-weight: 200;
     }
-
-    /*----- nosotros -----*/
 
     .template__nosotros{
         grid-template-areas: 
@@ -714,7 +707,7 @@ p{
 
 @media screen and (max-width:800px){
     /*----- index -----*/
-    .index__h2{
+    .index__titulo__h2{
         font-size: 4em;
     }
     .nav{
@@ -751,6 +744,12 @@ p{
     .checkbtn{
         margin-right: 2rem;
     }
+    .enlace{
+        margin-left: 0;
+    }
+    .header__h1{
+        width: 100px;
+    }
 
     /*----- index -----*/
     .index__titulo{
@@ -758,12 +757,6 @@ p{
     }
     .index__texto{
         gap: 25px;
-    }
-    .enlace{
-        margin-left: 0;
-    }
-    .header__h1{
-        width: 100px;
     }
 
     /*----- nosotros -----*/
@@ -796,10 +789,10 @@ p{
 @media screen and (max-width:480px){
 
     /*----- index -----*/
-    .index__h2{
+    .index__titulo__h2{
         font-size: 3em;
     }
-    .index__h3{
+    .index__titulo__h3{
         font-size: 2em;
     }
 
@@ -836,6 +829,8 @@ p{
     .index__titulo{
         margin: 4rem 0 0 4rem;
     }
+
+    /*----- trabajos -----*/
     .main__titulo{
         font-size: 2.5em;
         justify-content: center;
@@ -847,8 +842,6 @@ p{
     .main__subtitulo{
         font-size: 1.6em;
     }
-
-    /*----- trabajos -----*/
     .trabajos__section{
         margin: 3rem;
     }
