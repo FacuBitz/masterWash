@@ -488,8 +488,6 @@ p{
     .main__subtitulo--nosotros{
         font-size: 1.8em;
     }
-
-    /* productos */
     .productos{
         max-width: 140px;
     }
@@ -806,9 +804,9 @@ p{
     }
 
     /* nosotros */
-    .div__subtitulo{
+    /* .div__subtitulo{
         font-size: 1.8em;
-    }
+    } */
 
     /*----- contacto -----*/
     .contacto__section{

@@ -1,0 +1,249 @@
+.nosotros{
+    display: grid;
+    grid-template-areas: 
+        "titulo titulo car  "
+        "logo   logo   logo "
+        "local  local  local"
+        "map    map    img  "
+    ;
+    grid-template-rows: 1fr 0.9fr 2fr 1fr;
+    grid-template-columns: 2fr 2fr 3fr;
+    justify-items: center;
+    &__titulo{
+        grid-area: titulo;
+        @include flex(column, center,null);
+        margin-top: $spacing-xs;
+        margin-right: $spacing-xs;
+        padding: $spacing-medium;
+        background: linear-gradient(180deg, #101638, rgb(31 ,45 ,71));
+        color: $primary;
+        .main__titulo{
+            max-width: 590px;
+            font-weight: 400;
+            font-size: 4em;
+            font-family: $font-alternativa;
+            text-transform: uppercase;
+        }
+        .main__subtitulo{
+            font-weight: 400;
+            font-size: 2em;
+            margin: $spacing-small;
+            font-family: $font-alternativa;
+        }
+    }
+    &__car{
+        grid-area: car;
+        display: flex;
+        .img__bmw{
+            height: auto;
+            width: 100%;
+            margin-top: $spacing-xs;
+        }
+    }
+    &__logo{
+        @include flex(null, null, center);
+        grid-area: logo;
+        .line{
+            background-color: $secondary;
+            width: 50vh;
+            height: 5px;
+            border-radius: 2px;
+        }
+        .img__logo{
+            height: auto;
+            width: 100%;
+            max-width: 220px;
+            margin: auto;
+        }
+    }
+    &__local{
+        grid-area: local;
+        @include flex (column, null, center);
+        .nuestroLocal{
+            @include flex (null, center, null);
+            width: 100%;
+            padding: $spacing-xs;
+            font-size: 4em;
+            font-weight: 600;
+            color: $primary;
+            background-color: rgb(31, 45, 71);
+            margin-bottom: 0;
+        }
+        .img__frente{
+            width: 100%;
+        }
+    }
+    &__map{
+        grid-area: map;
+        @include flex (column, null, null);
+        font-size: $medium;
+        margin: $spacing-small;
+        margin-top: $spacing-medium;
+        .ubicacion{
+            margin-bottom: $spacing-xs;
+        }
+        .link__direccion{
+            display: none;
+            text-decoration: none;
+            color: $text-color;
+            border-bottom: 2px solid #087ee5;
+            width: 20vw;
+            cursor: pointer;
+        }
+        .mapa{
+            box-shadow: map-get($shadows, shadow-cards);
+        }
+    }
+    &__img{
+        grid-area: img;
+        @include flex (null, null, center);
+        .productos{
+            height: auto;
+            width: 100%;
+            max-width: 185px;
+            &:hover{
+                animation: shake 0.5s;
+                animation-iteration-count: infinite;
+            }
+        }
+    }
+}
+
+@keyframes shake{
+    0% {transform: rotate(2deg);}
+    25% {transform: rotate(-2deg);}
+    50% {transform: rotate(-4deg);}
+    75% {transform: rotate(2deg);}
+}
+
+
+@media screen and (max-width:1300px){
+    .nosotros__titulo .main__subtitulo{
+        font-size: 1.8em;
+    }
+    .nosotros__img .productos{
+        max-width: 140px;
+    }
+}
+@media screen and (max-width:1120px){
+    .nosotros__titulo .main__titulo{
+        font-size: 3em;
+        font-weight: 300;
+    }
+    .nosotros__titulo .main__subtitulo{
+        font-size: $base;
+        font-weight: 200;
+    }
+    .nosotros{
+        grid-template-areas: 
+            "titulo titulo car  "
+            "logo   logo   logo "
+            "local  local  local"
+            "map    map    map  ";
+        grid-template-rows: 0.5fr 0.9fr 1.5fr 1fr;
+    }
+    .nosotros__logo .line{
+        width: 35vh;
+    }
+    .nosotros__local .nuestroLocal{
+        font-size: 2.5em;
+    }
+    .nosotros__map{
+        flex-direction: column;
+        gap: 15px;
+        font-size: 2.5em;
+        margin-top: $spacing-small;
+    }
+    .nosotros__map .nosotros__ubicacion{
+        margin-bottom: 0;
+        margin-left: $spacing-xs;
+    }
+    .nosotros__img{
+        display: none;
+    }
+}
+@media screen and (max-width: 990px){
+    .nosotros__titulo{
+        padding: 3rem;
+    }
+}
+@media screen and (max-width:860px){
+    .nosotros{
+        grid-template-areas: 
+            "titulo titulo titulo"
+            "logo   logo   logo "
+            "local  local  local"
+            "map    map    map  ";
+            grid-template-rows: 0.5fr 0.5fr 1fr 0.8fr;
+    }
+    .nosotros__car{
+        display: none;
+    }
+    .nosotros__titulo{
+        background-image: url(https://images.unsplash.com/photo-1541443724873-8ba49db7a737?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80);
+        margin-right: 0;
+        background-size: cover;
+        background-position: center;
+        
+    }
+    .nosotros__titulo .main__subtitulo{
+        background-color: rgba(0, 0, 0, 0.3);
+        padding: $spacing-xs;
+    }
+    .nosotros__logo .img__logo{
+        max-width: 150px;
+        margin: 15px 0;
+    }
+    .nosotros__logo .line{
+        width: 25vh;
+        height: 3px;
+    }
+    .nosotros__local .nuestroLocal{
+        background-color: $secondary;
+    }
+    .nosotros__map{
+        font-size: 2em;
+        margin-top: 3rem;
+    }
+}
+@media screen and (max-width:600px){
+    .nosotros{
+        grid-template-rows: 0.5fr 0.2fr 0fr 0fr;
+    }
+    .nosotros__logo .img__logo{
+        max-width: 90px;
+    }
+    .nosotros__logo .line{
+        width: 14vh;
+    }
+    .nosotros__map .mapa{
+        display: none;
+    }
+    .nosotros__map .link__direccion{
+        display: block;
+    }
+}
+@media screen and (max-width:375px){
+    .nosotros__titulo{
+        padding: 3rem;
+    }
+    .nosotros__titulo .main__subtitulo{
+        font-size: $small;
+        margin: $spacing-xs;
+    }
+    .nosotros__local .nuestroLocal{
+        font-size: 1.8em;
+    }
+    .nosotros__map{
+        font-size: $base;
+    }
+}
+@media screen and (max-width:320px){
+    .nosotros__titulo{
+        padding: 1.5rem;
+    }
+    .nosotros__logo .line{
+        width: 9vh;
+        height: 2px;
+    }
+}

@@ -1,5 +1,5 @@
 .row{
-    align-items: flex-end;
+    @include flex(null, null, flex-end);
 }
 .nav{
     gap: 20px;
@@ -19,6 +19,6 @@
 
 @media screen and (max-width:575px){
     .nav{
-        justify-content: center;
+        @include flex(null, center, null);
     }
 }

@@ -1,10 +1,12 @@
-/*----- variables -----*/
+//misc
 @import './misc/variables';
-/*----- normalizadores -----*/
 @import './misc/normalize';
-/*----- header -----*/
-@import './partials/header';
-/*----- main index -----*/
+@import './misc/mixins';
+
+//views
 @import './views/index';
-/*----- footer -----*/
+@import './views/nosotros';
+
+//partials
+@import './partials/header';
 @import './partials/footer';

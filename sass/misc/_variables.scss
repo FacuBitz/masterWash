@@ -21,7 +21,11 @@ $spacing-xs: 1rem;
 $large: 5em;
 $medium: 2.2em;
 $base: 1.6em;
-$samll: 1.4em;
+$small: 1.4em;
 
-/*shadows*/
-$shadow-small: 3px 0px 8px 0px rgba(0, 0, 0, 0.3);
+/*map shadows*/
+$shadows: (
+    shadow-small: 3px 0px 8px 0px rgba(0, 0, 0, 0.3),
+    shadow-cards: 0px 12px 20px 0px rgba(87, 87, 87, 0.2),
+)
+
