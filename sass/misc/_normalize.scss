@@ -11,3 +11,24 @@ body{
     font-family: Montserrat , sans-serif;
     font-style: normal;
 }
+//clases de bootstrap
+p{
+    margin-bottom: 0;
+}
+.nav-link:hover{
+    background-color: #c2cdd6;
+    border-radius: 5px;
+}
+.form-label{
+    font-size: 1.4em;
+}
+.form-control{
+    border: 1px solid #808183;
+}
+.form-select{
+    border: 1px solid #808183;
+}
+.btn{
+    margin-right: .5rem;
+}
+//fin clases de bootstrap

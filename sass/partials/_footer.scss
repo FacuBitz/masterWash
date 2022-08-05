@@ -1,6 +1,9 @@
 .row{
     @include flex(null, null, flex-end);
 }
+.linea__negra{
+    border-bottom: 1px solid #626262;
+}
 .nav{
     gap: 20px;
     .text-muted{

@@ -460,13 +460,15 @@ p{
     display: none;
 }
 /* trabajos */
-.trabajos__footer{
+.footer__negro{
     color: #29292e;
     font-size: 1.2em;
 }
-.trabajos__footer:hover{
+/* .footer__negro:hover{
     color: #29292e;
-}
+} */
+
+
 /* contacto */
 .form-label{
     font-size: 1.4em;

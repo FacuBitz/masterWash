@@ -1,0 +1,96 @@
+.productos__titulo{
+    font-weight: 600;
+    font-size: 4em;
+    margin: $spacing-medium 0 0 8rem;
+    font-family: $font-alternativa;
+    text-transform: uppercase;
+}
+.template__productos{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 2fr);
+    margin: 5rem 10rem 0 10rem;
+    row-gap: 50px;
+    column-gap: 20px;
+    .productos__article{
+        background-color: #e5e5e5;
+        box-shadow: map-get($shadows, shadow-medium);
+        border-radius: 6px;
+        @include flex(column, null, null);
+        width: 15vw;
+        max-width: 250px;
+        cursor: pointer;
+        transition: all .5s;
+        &:hover{
+            transform: scale(1.1 ,1.1);
+        }
+        .productos__texto{
+            margin: $spacing-xs;
+            font-size: 1.2em;
+            font-weight: 600;
+        } 
+    }
+}
+
+
+@media screen and (max-width:1120px){
+    .productos__titulo{
+        display: flex;
+        justify-content: center;
+        margin: 3rem 0 0 0;
+    }
+    .template__productos{
+        margin: 5rem 7rem 0 7rem;
+        .productos__article{
+            width: 18vw;
+        }
+    }
+}
+@media screen and (max-width:940px){
+    .template__productos{
+        grid-template-columns: repeat(3, 2fr);
+        grid-template-rows: repeat(3, 1fr);
+        column-gap: 30px;
+        margin: 5rem 5rem 0 5rem;
+        .productos__article{
+            width: 21vw;
+        }
+    }
+}
+@media screen and (max-width:800px){
+    .template__productos .productos__article{
+        width: 22vw;
+    }
+}
+@media screen and (max-width:700px){
+    .productos__titulo{
+        font-size: 3em;
+    }
+    .template__productos{
+        grid-template-columns: repeat(2, 2fr);
+        grid-template-rows: repeat(4, 1fr);
+        .productos__article{
+            width: 32vw;
+        }
+    }
+}
+@media screen and (max-width:480px){
+    .productos__titulo{
+        font-size: $medium;
+    }
+    .template__productos{
+        margin: 5rem $spacing-small 0 $spacing-small;
+        .productos__article{
+            width: 38vw;
+        }
+    }
+}
+@media screen and (max-width:375px){
+    .template__productos{
+        grid-template-columns: 1fr;
+        .productos__article{
+            width: 60vw;
+        }
+    }
+}
