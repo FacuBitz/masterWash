@@ -1,0 +1,27 @@
+.contacto__titulo{
+    @extend .trabajos__titulo;
+}
+.contacto__section{
+    font-family: $font-alternativa;
+    margin-top: $spacing-medium;
+    padding: 5rem 0 5rem 5rem;
+    font-size: $base;
+    background: linear-gradient(90deg, #c7cff98a, transparent);
+    .contacto__margin{
+        margin-top: $spacing-xs;
+        margin-left: $spacing-xs;
+    }
+}
+
+@media screen and (max-width:480px){
+    .contacto__section{
+        font-size: $small;
+        padding-left: $spacing-small;
+    }
+}
+@media screen and (max-width:400px){
+    .contacto__titulo{
+        font-size: 1.8em;
+        padding-bottom: 0;
+    }
+}

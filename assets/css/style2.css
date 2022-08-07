@@ -287,7 +287,7 @@ p {
     width: 9vh;
     height: 2px; } }
 
-.productos__titulo, .trabajos__titulo {
+.productos__titulo, .trabajos__titulo, .contacto__titulo {
   font-weight: 600;
   font-size: 4em;
   margin: 4rem 0 0 8rem;
@@ -320,7 +320,7 @@ p {
       font-weight: 600; }
 
 @media screen and (max-width: 1120px) {
-  .productos__titulo, .trabajos__titulo {
+  .productos__titulo, .trabajos__titulo, .contacto__titulo {
     display: flex;
     justify-content: center;
     margin: 3rem 0 0 0; }
@@ -343,7 +343,7 @@ p {
     width: 22vw; } }
 
 @media screen and (max-width: 700px) {
-  .productos__titulo, .trabajos__titulo {
+  .productos__titulo, .trabajos__titulo, .contacto__titulo {
     font-size: 3em; }
   .template__productos {
     grid-template-columns: repeat(2, 2fr);
@@ -352,7 +352,7 @@ p {
       width: 32vw; } }
 
 @media screen and (max-width: 480px) {
-  .productos__titulo, .trabajos__titulo {
+  .productos__titulo, .trabajos__titulo, .contacto__titulo {
     font-size: 2.2em; }
   .template__productos {
     margin: 5rem 2rem 0 2rem; }
@@ -365,7 +365,7 @@ p {
     .template__productos .productos__article {
       width: 60vw; } }
 
-.trabajos__titulo {
+.trabajos__titulo, .contacto__titulo {
   margin: 0;
   padding: 4rem 0 4rem 8rem; }
 
@@ -420,7 +420,7 @@ p {
     box-shadow: 9px 9px 9px 0px rgba(12, 12, 12, 0.2); }
 
 @media screen and (max-width: 1120px) {
-  .trabajos__titulo {
+  .trabajos__titulo, .contacto__titulo {
     padding-left: 0; } }
 
 @media screen and (max-width: 990px) {
@@ -450,6 +450,26 @@ p {
 @media screen and (max-width: 320px) {
   .section__article__sub {
     font-size: 1.6em; } }
+
+.contacto__section {
+  font-family: "Poppins", sans-serif;
+  margin-top: 4rem;
+  padding: 5rem 0 5rem 5rem;
+  font-size: 1.6em;
+  background: linear-gradient(90deg, #c7cff98a, transparent); }
+  .contacto__section .contacto__margin {
+    margin-top: 1rem;
+    margin-left: 1rem; }
+
+@media screen and (max-width: 480px) {
+  .contacto__section {
+    font-size: 1.4em;
+    padding-left: 2rem; } }
+
+@media screen and (max-width: 400px) {
+  .contacto__titulo {
+    font-size: 1.8em;
+    padding-bottom: 0; } }
 
 nav {
   display: flex;
