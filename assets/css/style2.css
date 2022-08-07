@@ -392,7 +392,7 @@ p {
       font-size: 2em;
       font-weight: 600;
       margin: 1.5rem; }
-    .section__article__lorem {
+    .section__article__texto {
       font-family: "Poppins", sans-serif;
       font-size: 1.6em;
       margin: 0rem 2rem;
@@ -436,12 +436,12 @@ p {
 @media screen and (max-width: 425px) {
   .section {
     padding: 3rem; }
-    .section .section__article__lorem {
+    .section .section__article__texto {
       font-size: 1.4em;
       line-height: 2rem; } }
 
 @media screen and (max-width: 375px) {
-  .section__article__lorem {
+  .section__article__texto {
     margin-bottom: 2rem; }
   .section__article__sellador {
     max-width: 160px;

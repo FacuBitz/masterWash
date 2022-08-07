@@ -26,7 +26,7 @@
             font-weight: 600;
             margin: 1.5rem;
         }
-        &__lorem{
+        &__texto{
             font-family: $font-alternativa;
             font-size: $base;
             margin: 0rem $spacing-small;
@@ -79,14 +79,14 @@
 @media screen and (max-width:425px){
     .section{
         padding: 3rem;
-        .section__article__lorem{
+        .section__article__texto{
             font-size: $small;
             line-height: $spacing-small;
         }
     }
 }
 @media screen and (max-width:375px){
-    .section__article__lorem{
+    .section__article__texto{
         margin-bottom: $spacing-small;
     }
     .section__article__sellador{
