@@ -1,0 +1,101 @@
+.trabajos__titulo{
+    @extend .productos__titulo;
+    margin: 0;
+    padding: $spacing-medium 0 $spacing-medium 8rem;;
+}
+.section{
+    @include flex(null, center, null);
+    flex-wrap: wrap;
+    padding: 5rem;
+    gap: 30px;
+    background-color: #e5e7ef;
+    box-shadow: inset 0px 3px 3px 0px #00000033;
+    &__article{
+        @include flex(column, null, null);
+        background-color: $background;
+        box-shadow: map-get($shadows, shadow-medium);
+        cursor: pointer;
+        max-width: 420px;
+        flex: 1 1 clamp(300px ,28vw ,450px);
+        transition: all .5s;
+        &:hover{
+            transform: scale(1.1 ,1.1);
+        }
+        &__sub{
+            font-size: 2em;
+            font-weight: 600;
+            margin: 1.5rem;
+        }
+        &__lorem{
+            font-family: $font-alternativa;
+            font-size: $base;
+            margin: 0rem $spacing-small;
+            line-height: $spacing-base;
+        }
+        &__sellador{
+            width: 100%;
+            height: auto;
+            max-width: 210px;
+            margin-top: $spacing-small;
+        }
+    }
+}
+.trabajos__div{
+    @include flex(null, center, null);
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 3rem;
+    background: linear-gradient(180deg, #e5e7ef, transparent);
+    &__sub{
+        font-family: $font-alternativa;
+        font-size: 3em;
+        color: $text-color;
+        font-weight: 600;
+        max-width: 600px;
+    }
+    &__iframe{
+        box-shadow: map-get($shadows, shadow-medium);
+    }
+}
+
+@media screen and (max-width: 1120px){
+    .trabajos__titulo{
+        padding-left: 0;
+    }
+}
+@media screen and (max-width: 990px){
+    .trabajos__div__sub{
+        max-width: 60vw;
+    }
+}
+@media screen and (max-width:700px){
+    .trabajos__div__sub{
+        font-size: 2em;
+    }
+    .trabajos__div__iframe{
+        width: 100%;
+    }
+}
+@media screen and (max-width:425px){
+    .section{
+        padding: 3rem;
+        .section__article__lorem{
+            font-size: $small;
+            line-height: $spacing-small;
+        }
+    }
+}
+@media screen and (max-width:375px){
+    .section__article__lorem{
+        margin-bottom: $spacing-small;
+    }
+    .section__article__sellador{
+        max-width: 160px;
+        margin-top: 0;
+    }
+}
+@media screen and (max-width:320px){
+    .section__article__sub{
+        font-size: $base;
+    }
+}
