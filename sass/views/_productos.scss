@@ -18,7 +18,7 @@
         box-shadow: map-get($shadows, shadow-medium);
         border-radius: 6px;
         @include flex(column, null, null);
-        width: 15vw;
+        width: 17vw;
         max-width: 250px;
         cursor: pointer;
         transition: all .5s;
@@ -27,7 +27,7 @@
         }
         .productos__texto{
             margin: $spacing-xs;
-            font-size: 1.2em;
+            font-size: 1.3em;
             font-weight: 600;
         } 
     }
@@ -43,6 +43,9 @@
     .template__productos{
         margin: 5rem 7rem 0 7rem;
         .productos__article{
+            .productos__texto{
+                font-size: 1.2em;
+            }
             width: 18vw;
         }
     }

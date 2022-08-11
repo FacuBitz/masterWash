@@ -308,7 +308,7 @@ p {
     border-radius: 6px;
     display: flex;
     flex-direction: column;
-    width: 15vw;
+    width: 17vw;
     max-width: 250px;
     cursor: pointer;
     transition: all .5s; }
@@ -316,7 +316,7 @@ p {
       transform: scale(1.1, 1.1); }
     .template__productos .productos__article .productos__texto {
       margin: 1rem;
-      font-size: 1.2em;
+      font-size: 1.3em;
       font-weight: 600; }
 
 @media screen and (max-width: 1120px) {
@@ -327,7 +327,9 @@ p {
   .template__productos {
     margin: 5rem 7rem 0 7rem; }
     .template__productos .productos__article {
-      width: 18vw; } }
+      width: 18vw; }
+      .template__productos .productos__article .productos__texto {
+        font-size: 1.2em; } }
 
 @media screen and (max-width: 940px) {
   .template__productos {
@@ -606,14 +608,17 @@ nav {
 .nav {
   gap: 20px; }
   .nav .text-muted {
-    font-size: 1.2em; }
+    font-size: 1.4em;
+    font-family: "Poppins", sans-serif; }
 
 .btn {
   margin-right: .5rem; }
 
 @media screen and (max-width: 800px) {
   .nav {
-    gap: 8px; } }
+    gap: 8px; }
+    .nav .text-muted {
+      font-size: 1.2em; } }
 
 @media screen and (max-width: 575px) {
   .nav {

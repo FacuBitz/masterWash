@@ -7,7 +7,8 @@
 .nav{
     gap: 20px;
     .text-muted{
-        font-size: 1.2em;
+        font-size: 1.4em;
+        font-family: $font-alternativa;
     }
 }
 .btn{
@@ -17,6 +18,9 @@
 @media screen and (max-width:800px){
     .nav{
         gap: 8px;
+        .text-muted{
+            font-size: 1.2em;
+        }
     }
 }
 
