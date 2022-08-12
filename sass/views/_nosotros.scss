@@ -6,34 +6,31 @@
         "local  local  local"
         "map    map    img  "
     ;
-    grid-template-rows: 1fr 0.9fr 2fr 1fr;
+    grid-template-rows: 0.6fr 0.9fr 2fr 1fr;
     grid-template-columns: 2fr 2fr 3fr;
     justify-items: center;
     &__titulo{
         grid-area: titulo;
         @include flex(column, center,null);
-        margin-top: $spacing-xs;
-        margin-right: $spacing-xs;
-        padding: $spacing-medium;
+        margin: $spacing-xs $spacing-xs 0 0;
+        padding: 3rem;
         background: linear-gradient(180deg, #101638, rgb(31 ,45 ,71));
         color: $primary;
         .main__titulo{
             max-width: 590px;
-            font-weight: 400;
             font-size: 4em;
             font-family: $font-alternativa;
             text-transform: uppercase;
+            margin-bottom: 0;
         }
         .main__subtitulo{
-            font-weight: 400;
             font-size: 2em;
-            margin: $spacing-small;
+            margin: $spacing-xs;
             font-family: $font-alternativa;
         }
     }
     &__car{
         grid-area: car;
-        display: flex;
         .img__bmw{
             height: auto;
             width: 100%;
@@ -124,7 +121,7 @@
         max-width: 140px;
     }
 }
-@media screen and (max-width:1120px){
+@media screen and (max-width:1160px){
     .nosotros__titulo .main__titulo{
         font-size: 3em;
         font-weight: 300;
@@ -161,12 +158,12 @@
         display: none;
     }
 }
-@media screen and (max-width: 990px){
+@media screen and (max-width: 1050px){
     .nosotros__titulo{
-        padding: 3rem;
+        padding: 2rem;
     }
 }
-@media screen and (max-width:860px){
+@media screen and (max-width:960px){
     .nosotros{
         grid-template-areas: 
             "titulo titulo titulo"
@@ -201,6 +198,8 @@
         background-color: $secondary;
     }
     .nosotros__map{
+        font-family: $font-alternativa;
+        gap: 0;
         font-size: 2em;
         margin-top: 3rem;
     }

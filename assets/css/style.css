@@ -39,6 +39,10 @@ p {
   max-width: 1500px;
   margin: 0 auto; }
 
+.contenedor__lg {
+  max-width: 1700px;
+  margin: 0 auto; }
+
 .index__body {
   background-color: #f7fafa; }
 
@@ -95,7 +99,7 @@ p {
 .nosotros {
   display: grid;
   grid-template-areas: "titulo titulo car  " "logo   logo   logo " "local  local  local" "map    map    img  ";
-  grid-template-rows: 1fr 0.9fr 2fr 1fr;
+  grid-template-rows: 0.6fr 0.9fr 2fr 1fr;
   grid-template-columns: 2fr 2fr 3fr;
   justify-items: center; }
   .nosotros__titulo {
@@ -103,25 +107,22 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 1rem;
-    margin-right: 1rem;
-    padding: 4rem;
+    margin: 1rem 1rem 0 0;
+    padding: 3rem;
     background: linear-gradient(180deg, #101638, #1f2d47);
     color: aliceblue; }
     .nosotros__titulo .main__titulo {
       max-width: 590px;
-      font-weight: 400;
       font-size: 4em;
       font-family: "Poppins", sans-serif;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      margin-bottom: 0; }
     .nosotros__titulo .main__subtitulo {
-      font-weight: 400;
       font-size: 2em;
-      margin: 2rem;
+      margin: 1rem;
       font-family: "Poppins", sans-serif; }
   .nosotros__car {
-    grid-area: car;
-    display: flex; }
+    grid-area: car; }
     .nosotros__car .img__bmw {
       height: auto;
       width: 100%;
@@ -202,7 +203,7 @@ p {
   .nosotros__img .productos {
     max-width: 140px; } }
 
-@media screen and (max-width: 1120px) {
+@media screen and (max-width: 1160px) {
   .nosotros__titulo .main__titulo {
     font-size: 3em;
     font-weight: 300; }
@@ -227,11 +228,11 @@ p {
   .nosotros__img {
     display: none; } }
 
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 1050px) {
   .nosotros__titulo {
-    padding: 3rem; } }
+    padding: 2rem; } }
 
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 960px) {
   .nosotros {
     grid-template-areas: "titulo titulo titulo" "logo   logo   logo " "local  local  local" "map    map    map  ";
     grid-template-rows: 0.5fr 0.5fr 1fr 0.8fr; }
@@ -254,6 +255,8 @@ p {
   .nosotros__local .nuestroLocal {
     background-color: #29292e; }
   .nosotros__map {
+    font-family: "Poppins", sans-serif;
+    gap: 0;
     font-size: 2em;
     margin-top: 3rem; } }
 
